@@ -5,7 +5,11 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/portfolio-dr-lamara/',   // 👈 اسم الريبو
-  plugins: [react()],
+  base: "/portfolio-dr-lamara/", // 👈 Ajoute cette ligne
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 })
-
